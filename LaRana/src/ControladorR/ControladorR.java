@@ -2,13 +2,10 @@ package ControladorR;
 
 import VistaR.PrincipalRana;
 import java.util.concurrent.ThreadLocalRandom;
-import java.util.Random;
-import java.util.Scanner;
 import javax.swing.*;
 
 public class ControladorR {
 
-    long ms;
 
     public void generadorNumerosCentenas(JLabel a, JLabel b, JLabel c, JLabel d) {
         int n = ThreadLocalRandom.current().nextInt(1, 2 + 1);
@@ -17,22 +14,22 @@ public class ControladorR {
         int numero2;
         int numero3;
         if (n == 2) {
-            numero0 = ThreadLocalRandom.current().nextInt(100, 998 + 1);
+            numero0 = ThreadLocalRandom.current().nextInt(100, 999 + 1);
             a.setText(Integer.toString(numero0));
-            numero1 = ThreadLocalRandom.current().nextInt(100, 998 + 1);
+            numero1 = ThreadLocalRandom.current().nextInt(100, 999 + 1);
             b.setText(Integer.toString(numero1));
-            numero2 = ThreadLocalRandom.current().nextInt(100, 998 + 1);
+            numero2 = ThreadLocalRandom.current().nextInt(100, 999 + 1);
             c.setText(Integer.toString(numero2));
-            numero3 = ThreadLocalRandom.current().nextInt(100, 998 + 1);
+            numero3 = ThreadLocalRandom.current().nextInt(100, 999 + 1);
             d.setText(Integer.toString(numero3));
         } else {
-            numero0 = ThreadLocalRandom.current().nextInt(10, 98 + 1);
+            numero0 = ThreadLocalRandom.current().nextInt(10, 99 + 1);
             a.setText(Integer.toString(numero0));
-            numero1 = ThreadLocalRandom.current().nextInt(10, 98 + 1);
+            numero1 = ThreadLocalRandom.current().nextInt(10, 99 + 1);
             b.setText(Integer.toString(numero1));
-            numero2 = ThreadLocalRandom.current().nextInt(10, 98 + 1);
+            numero2 = ThreadLocalRandom.current().nextInt(10, 99 + 1);
             c.setText(Integer.toString(numero2));
-            numero3 = ThreadLocalRandom.current().nextInt(10, 98 + 1);
+            numero3 = ThreadLocalRandom.current().nextInt(10, 99 + 1);
             d.setText(Integer.toString(numero3));
         }
 

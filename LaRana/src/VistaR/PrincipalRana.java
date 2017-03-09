@@ -10,24 +10,32 @@ public class PrincipalRana extends javax.swing.JFrame {
 
     public PrincipalRana() {
         initComponents();
+        setLocationRelativeTo(null);
         Gif.setVisible(false);
 
     }
-
-    public void transferirTexto(JLabel nub) {
+    int k=0;
+    public void transferirTexto(JLabel nub, JLabel roc) {
         nub.setTransferHandler(new TransferHandler("text"));
+        roc.setTransferHandler(new TransferHandler("text"));
+        
         MouseListener ml = new MouseAdapter() {
             //creamos el método para transferir
             //datos al presionar con el ratón
+            
             public void mousePressed(MouseEvent e) {
                 JComponent jc = (JComponent) e.getSource();
                 TransferHandler th = jc.getTransferHandler();
                 th.exportAsDrag(jc, e, TransferHandler.COPY);
-            }
+                
+            }            
         };
+        k++;
         nub.addMouseListener(ml);
+        roc.addMouseListener(ml);
         
     }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -50,8 +58,8 @@ public class PrincipalRana extends javax.swing.JFrame {
         Roca1 = new javax.swing.JLabel();
         Roca2 = new javax.swing.JLabel();
         Roca4 = new javax.swing.JLabel();
-        Gif = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        Gif = new javax.swing.JLabel();
         Nube3 = new javax.swing.JLabel();
         Roca5 = new javax.swing.JLabel();
         Nube4 = new javax.swing.JLabel();
@@ -70,10 +78,16 @@ public class PrincipalRana extends javax.swing.JFrame {
         ro1.setFont(new java.awt.Font("DejaVu Sans", 1, 24)); // NOI18N
         ro1.setForeground(new java.awt.Color(1, 1, 1));
         ro1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ro1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                ro1MouseReleased(evt);
+            }
+        });
         getContentPane().add(ro1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 620, 150, 80));
 
         ro2.setFont(new java.awt.Font("DejaVu Sans", 1, 24)); // NOI18N
         ro2.setForeground(new java.awt.Color(1, 1, 1));
+        ro2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         getContentPane().add(ro2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 620, 150, 80));
 
         ro3.setFont(new java.awt.Font("DejaVu Sans", 1, 24)); // NOI18N
@@ -89,25 +103,21 @@ public class PrincipalRana extends javax.swing.JFrame {
         num1.setFont(new java.awt.Font("DejaVu Sans", 1, 24)); // NOI18N
         num1.setForeground(new java.awt.Color(1, 1, 1));
         num1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        num1.setText("Hola");
         getContentPane().add(num1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 200, 170, 110));
 
         num2.setFont(new java.awt.Font("DejaVu Sans", 1, 24)); // NOI18N
         num2.setForeground(new java.awt.Color(1, 1, 1));
         num2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        num2.setText("Hola");
         getContentPane().add(num2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 310, 170, 110));
 
         num3.setFont(new java.awt.Font("DejaVu Sans", 1, 24)); // NOI18N
         num3.setForeground(new java.awt.Color(1, 1, 1));
         num3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        num3.setText("Hola");
         getContentPane().add(num3, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 190, 170, 110));
 
         num4.setFont(new java.awt.Font("DejaVu Sans", 1, 24)); // NOI18N
         num4.setForeground(new java.awt.Color(1, 1, 1));
         num4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        num4.setText("Hola");
         getContentPane().add(num4, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 340, 170, 110));
 
         Roca1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VistaR/Recursos/Rocka2.png"))); // NOI18N
@@ -121,16 +131,16 @@ public class PrincipalRana extends javax.swing.JFrame {
         Roca4.setText("jLabel1");
         getContentPane().add(Roca4, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 620, 150, 80));
 
-        Gif.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VistaR/Recursos/output_BnuDB1.gif"))); // NOI18N
-        getContentPane().add(Gif, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 410, 1000, 310));
-
         jButton1.setText("jButton1");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 530, -1, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 530, 100, -1));
+
+        Gif.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VistaR/Recursos/output_BnuDB1.gif"))); // NOI18N
+        getContentPane().add(Gif, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 410, 1000, 310));
 
         Nube3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VistaR/Recursos/Nube .png"))); // NOI18N
         Nube3.setText("jLabel1");
@@ -167,21 +177,23 @@ public class PrincipalRana extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-//        Gif.setVisible(true);
-//        RanaxRocaL.setVisible(false);
-//        Nube3.setVisible(false);
-//        Roca1.setVisible(false);
-//        Roca2.setVisible(false);
-//        Roca4.setVisible(false);
+
         ControladorR r = new ControladorR();
         r.generadorNumerosCentenas(num1, num2, num3, num4);
-        transferirTexto(num1);
-        transferirTexto(num2);
-        transferirTexto(num3);
-        transferirTexto(num4);
-
+        transferirTexto(num1, ro1);
+        System.out.println(k);
+        transferirTexto(num2, ro2);
+        System.out.println(k);
+        transferirTexto(num3,ro3);
+        System.out.println(k);
+        transferirTexto(num4,ro4);
+        System.out.println(k);
 
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void ro1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ro1MouseReleased
+        
+    }//GEN-LAST:event_ro1MouseReleased
 
     /**
      * @param args the command line arguments
