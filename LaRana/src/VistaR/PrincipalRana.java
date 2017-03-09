@@ -12,6 +12,11 @@ public class PrincipalRana extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
         Gif.setVisible(false);
+        Roca1.setVisible(false);
+        Roca2.setVisible(false);
+        Roca5.setVisible(false);
+        Roca4.setVisible(false);
+        
 
     }
     int k=0;
@@ -35,6 +40,8 @@ public class PrincipalRana extends javax.swing.JFrame {
         roc.addMouseListener(ml);
         
     }
+    
+  
     
 
     /**
@@ -67,22 +74,17 @@ public class PrincipalRana extends javax.swing.JFrame {
         Nube1 = new javax.swing.JLabel();
         Nube2 = new javax.swing.JLabel();
         TITULO = new javax.swing.JLabel();
-        Fondo = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         RanaxRocaL.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VistaR/Recursos/RanaxRoca.png"))); // NOI18N
-        getContentPane().add(RanaxRocaL, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 540, 190, 160));
+        getContentPane().add(RanaxRocaL, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 530, 190, 160));
 
         ro1.setFont(new java.awt.Font("DejaVu Sans", 1, 24)); // NOI18N
         ro1.setForeground(new java.awt.Color(1, 1, 1));
         ro1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ro1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                ro1MouseReleased(evt);
-            }
-        });
         getContentPane().add(ro1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 620, 150, 80));
 
         ro2.setFont(new java.awt.Font("DejaVu Sans", 1, 24)); // NOI18N
@@ -140,7 +142,7 @@ public class PrincipalRana extends javax.swing.JFrame {
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 530, 100, -1));
 
         Gif.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VistaR/Recursos/output_BnuDB1.gif"))); // NOI18N
-        getContentPane().add(Gif, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 410, 1000, 310));
+        getContentPane().add(Gif, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 1000, 310));
 
         Nube3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VistaR/Recursos/Nube .png"))); // NOI18N
         Nube3.setText("jLabel1");
@@ -170,14 +172,29 @@ public class PrincipalRana extends javax.swing.JFrame {
         TITULO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VistaR/Recursos/Titulo2.png"))); // NOI18N
         getContentPane().add(TITULO, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 10, 330, 150));
 
-        Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VistaR/Recursos/Fondo.jpg"))); // NOI18N
-        getContentPane().add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 740));
+        jButton3.setText("jButton3");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
+        ro1.setText(" ");
+        ro2.setText(" ");
+        ro3.setText(" ");
+        ro4.setText(" ");
+        
+        Roca1.setVisible(true);
+        Roca2.setVisible(true);
+        Roca5.setVisible(true);
+        Roca4.setVisible(true);
+        
         ControladorR r = new ControladorR();
         r.generadorNumerosCentenas(num1, num2, num3, num4);
         transferirTexto(num1, ro1);
@@ -191,9 +208,51 @@ public class PrincipalRana extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void ro1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ro1MouseReleased
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+       
+        String roc1 = ro1.getText();
+       int roquita1  = Integer.parseInt(roc1);
+        String roc2 = ro2.getText();
+       int roquita2  = Integer.parseInt(roc2);
+         String roc3 = ro3.getText();
+       int roquita3  = Integer.parseInt(roc3);
+         String roc4 = ro4.getText();
+       int roquita4  = Integer.parseInt(roc4);
+       
+       
+       if(roquita1>roquita2){
+          Roca2.setVisible(false);
+          ro2.setText(" ");
+           
+       }
+       
+       if ( roquita2>roquita3){
+           Roca5.setVisible(false);
+           ro3.setText(" ");
+       }
+       
+       
+       if ( roquita3>roquita4){
+           Roca4.setVisible(false);
+           ro4.setText(" ");
+       }
+       
+       else{
+           Gif.setVisible(true);
+           ro1.setText(" ");
+           ro2.setText(" ");
+           ro3.setText(" ");
+           ro4.setText(" ");
+           num1.setText(" ");
+           num2.setText(" ");
+           num3.setText(" ");
+           num4.setText(" ");
+       }
         
-    }//GEN-LAST:event_ro1MouseReleased
+        
+        
+        
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -231,7 +290,6 @@ public class PrincipalRana extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel Fondo;
     private javax.swing.JLabel Gif;
     private javax.swing.JLabel Nube1;
     private javax.swing.JLabel Nube2;
@@ -245,6 +303,7 @@ public class PrincipalRana extends javax.swing.JFrame {
     private javax.swing.JLabel Roca5;
     private javax.swing.JLabel TITULO;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel num1;
     private javax.swing.JLabel num2;
     private javax.swing.JLabel num3;
