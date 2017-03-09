@@ -36,7 +36,13 @@ public class PrincipalRana extends javax.swing.JFrame {
         Roca4 = new javax.swing.JLabel();
         Gif = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        Roca5 = new javax.swing.JLabel();
+        Roca6 = new javax.swing.JLabel();
+        Roca8 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        Roca7 = new javax.swing.JLabel();
+        Roca9 = new javax.swing.JLabel();
+        TITULO = new javax.swing.JLabel();
         Fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -45,9 +51,9 @@ public class PrincipalRana extends javax.swing.JFrame {
         RanaxRocaL.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VistaR/Recursos/RanaxRoca.png"))); // NOI18N
         getContentPane().add(RanaxRocaL, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 540, 190, 160));
 
-        Roca3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VistaR/Recursos/Rocka2.png"))); // NOI18N
+        Roca3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VistaR/Recursos/Nube .png"))); // NOI18N
         Roca3.setText("jLabel1");
-        getContentPane().add(Roca3, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 620, 150, 80));
+        getContentPane().add(Roca3, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 190, 170, 110));
 
         Roca1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VistaR/Recursos/Rocka2.png"))); // NOI18N
         getContentPane().add(Roca1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 620, 150, 80));
@@ -71,10 +77,33 @@ public class PrincipalRana extends javax.swing.JFrame {
         });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 530, -1, -1));
 
+        Roca5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VistaR/Recursos/Rocka2.png"))); // NOI18N
+        Roca5.setText("jLabel1");
+        getContentPane().add(Roca5, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 620, 150, 80));
+
+        Roca6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VistaR/Recursos/Rocka2.png"))); // NOI18N
+        Roca6.setText("jLabel1");
+        getContentPane().add(Roca6, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 620, 150, 80));
+
+        Roca8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VistaR/Recursos/Nube .png"))); // NOI18N
+        Roca8.setText("jLabel1");
+        getContentPane().add(Roca8, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 340, 170, 110));
+
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VistaR/Recursos/Letrero.png"))); // NOI18N
         jLabel1.setToolTipText("");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 170, 290, 350));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 30, 320, 350));
+
+        Roca7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VistaR/Recursos/Nube .png"))); // NOI18N
+        Roca7.setText("jLabel1");
+        getContentPane().add(Roca7, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 200, 170, 110));
+
+        Roca9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VistaR/Recursos/Nube .png"))); // NOI18N
+        Roca9.setText("jLabel1");
+        getContentPane().add(Roca9, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 310, 170, 110));
+
+        TITULO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VistaR/Recursos/Titulo2.png"))); // NOI18N
+        getContentPane().add(TITULO, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 10, 330, 150));
 
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VistaR/Recursos/Fondo.jpg"))); // NOI18N
         getContentPane().add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 740));
@@ -134,6 +163,12 @@ public class PrincipalRana extends javax.swing.JFrame {
     private javax.swing.JLabel Roca2;
     private javax.swing.JLabel Roca3;
     private javax.swing.JLabel Roca4;
+    private javax.swing.JLabel Roca5;
+    private javax.swing.JLabel Roca6;
+    private javax.swing.JLabel Roca7;
+    private javax.swing.JLabel Roca8;
+    private javax.swing.JLabel Roca9;
+    private javax.swing.JLabel TITULO;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
