@@ -247,6 +247,11 @@ public class PrincipalRana extends javax.swing.JFrame {
            num2.setText(" ");
            num3.setText(" ");
            num4.setText(" ");
+           Roca1.setVisible(false);
+           Roca2.setVisible(false);
+           Roca5.setVisible(false);
+           Roca4.setVisible(false);
+           RanaxRocaL.setVisible(false);
        }
         
         
