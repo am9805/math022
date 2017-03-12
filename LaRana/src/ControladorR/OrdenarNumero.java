@@ -11,11 +11,11 @@ import javax.swing.JLabel;
  *
  * @author JuanPablo
  */
-public abstract  class OperacionConNumero implements INumeroStrategy {
+public abstract  class OrdenarNumero implements IOrdenarStrategy {
     
     private String ordenNumerico;
 
-    public OperacionConNumero(String ordenNumerico) {
+    public OrdenarNumero(String ordenNumerico) {
         this.ordenNumerico = ordenNumerico;
     }
     

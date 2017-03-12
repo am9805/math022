@@ -5,14 +5,14 @@
  */
 package Modelo;
 
-import ControladorR.OperacionConNumero;
+import ControladorR.OrdenarNumero;
 import javax.swing.JLabel;
 
 /**
  *
  * @author JuanPablo
  */
-public class OrdenDecenaExactaASC extends OperacionConNumero {
+public class OrdenDecenaExactaASC extends OrdenarNumero {
 
     private String ordenNumerico;
     

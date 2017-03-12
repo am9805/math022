@@ -5,7 +5,7 @@
  */
 package Modelo;
 
-import ControladorR.OperacionConNumero;
+import ControladorR.OrdenarNumero;
 import javax.swing.JLabel;
 
 
@@ -13,7 +13,7 @@ import javax.swing.JLabel;
  *
  * @author JuanPablo
  */
-public class OrdenDescendente extends OperacionConNumero {
+public class OrdenDescendente extends OrdenarNumero {
 
  private String OrdenNumerico;
 

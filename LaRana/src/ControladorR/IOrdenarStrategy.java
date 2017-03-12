@@ -11,7 +11,7 @@ import javax.swing.JLabel;
  *
  * @author JuanPablo
  */
-public interface INumeroStrategy {
+public interface IOrdenarStrategy {
     
       boolean ordenar(JLabel roca1, JLabel roca2, JLabel roca3, JLabel roca4,
             JLabel numRoc1, JLabel numRoc2, JLabel numRoc3, JLabel numRoc4,
