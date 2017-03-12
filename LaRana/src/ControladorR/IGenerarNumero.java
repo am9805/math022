@@ -5,10 +5,14 @@
  */
 package ControladorR;
 
+import javax.swing.JLabel;
+
 /**
  *
  * @author JuanPablo
  */
 public interface IGenerarNumero {
-    
+   
+    void GenerarNumero(JLabel a, JLabel b, JLabel c, JLabel d);
+            
 }
