@@ -44,12 +44,12 @@ public class ControladorR {
         int i = 0, cantidad = 4;
         int arreglo[] = new int[cantidad];
 
-        int numero = (ThreadLocalRandom.current().nextInt(10, 99 + 1));
-        arreglo[i] = numero - (numero % 10);
+        int numero = (ThreadLocalRandom.current().nextInt(10, 97 + 1));
+        arreglo[i] = numero;
 
         for (i = 1; i < cantidad; i++) {
-            int numero1 = (ThreadLocalRandom.current().nextInt(10, 99 + 1));
-            arreglo[i] = numero1 - (numero1 % 10);
+            int numero1 = (ThreadLocalRandom.current().nextInt(numero, numero + 4));
+            arreglo[i] = numero1;
             for (int j = 0; j < i; j++) {
                 if (arreglo[i] == arreglo[j]) {
                     i--;

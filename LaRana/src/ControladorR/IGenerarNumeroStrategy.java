@@ -11,7 +11,7 @@ import javax.swing.JLabel;
  *
  * @author JuanPablo
  */
-public interface IGenerarNumero {
+public interface IGenerarNumeroStrategy {
    
     void GenerarNumero(JLabel a, JLabel b, JLabel c, JLabel d);
             

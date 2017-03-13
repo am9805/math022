@@ -3,31 +3,31 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Modelo;
+package ControladorR;
 
 import ControladorR.OrdenarNumero;
 import javax.swing.JLabel;
 
 /**
  *
- * 
+ * @author JuanPablo
  */
 public class OrdenDescendente extends OrdenarNumero {
 
-    private String OrdenNumerico;
-
+    private String ordenNumerico;
+    
     public OrdenDescendente(String ordenNumerico) {
         super(ordenNumerico);
-
+        this.ordenNumerico = ordenNumerico;
     }
-
-    @Override
+    
+    
+      @Override
     public boolean ordenar(JLabel roca1, JLabel roca2, JLabel roca3, JLabel roca4,
             JLabel numRoc1, JLabel numRoc2, JLabel numRoc3, JLabel numRoc4,
             JLabel nube1, JLabel nube2, JLabel nube3, JLabel nube4,
             JLabel Gif, JLabel RanaxRocaL) {
-
-        boolean validarRespuesta = false;
+           boolean validarRespuesta = false;
 
         while (validarRespuesta == false) {
 
@@ -40,23 +40,24 @@ public class OrdenDescendente extends OrdenarNumero {
             String roc4 = numRoc4.getText();
             int numroc4 = Integer.parseInt(roc4);
 
-            if (numroc1 < numroc2) {
+            if (numroc1 > numroc2) {
                 roca2.setVisible(false);
                 numRoc2.setText(" ");
                 validarRespuesta = false;
 
             }
 
-            if (numroc2 < numroc3) {
+            if (numroc2 > numroc3) {
                 roca3.setVisible(false);
                 numRoc3.setText(" ");
                 validarRespuesta = false;
             }
 
-            if (numroc3 < numroc4) {
+            if (numroc3 > numroc4) {
                 roca4.setVisible(false);
                 numRoc4.setText(" ");
                 validarRespuesta = false;
+                
             } else if (numroc1 > numroc2 && numroc2 > numroc3 && numroc3 > numroc4) {
                 Gif.setVisible(true);
                 numRoc1.setText(" ");
@@ -79,5 +80,7 @@ public class OrdenDescendente extends OrdenarNumero {
         return (validarRespuesta);
 
     }
-
+    
+    
+    
 }

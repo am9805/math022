@@ -11,7 +11,7 @@ import javax.swing.JLabel;
  *
  * @author JuanPablo
  */
-public abstract class GenerarNumero implements IGenerarNumero{
+public abstract class GenerarNumero implements IGenerarNumeroStrategy{
 
     private String Generador;
 
