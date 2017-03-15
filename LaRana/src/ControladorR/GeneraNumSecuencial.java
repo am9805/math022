@@ -25,7 +25,7 @@ public class GeneraNumSecuencial extends GenerarNumero {
           int i = 0, cantidad = 4;
         int arreglo[] = new int[cantidad];
 
-        int numero = (ThreadLocalRandom.current().nextInt(10, 97 + 1));
+        int numero = (ThreadLocalRandom.current().nextInt(10, 96 + 1));
         arreglo[i] = numero;
 
         for (i = 1; i < cantidad; i++) {
