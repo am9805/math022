@@ -1,6 +1,7 @@
 package VistaR;
 
-import ControladorR.ControladorR;
+import ControladorR.ControladorGenerarNumero;
+import ControladorR.ControladorOrdenar;
 import ControladorR.GeneradorFactory;
 import ControladorR.OrdenadorFactory;
 import java.awt.event.MouseAdapter;
@@ -20,34 +21,30 @@ public class PrincipalRana extends javax.swing.JFrame {
         Roca2.setVisible(false);
         Roca3.setVisible(false);
         Roca4.setVisible(false);
-        
-        
 
     }
-    int k=0;
+    int k = 0;
+
     public void transferirTexto(JLabel nub, JLabel roc) {
         nub.setTransferHandler(new TransferHandler("text"));
         roc.setTransferHandler(new TransferHandler("text"));
-        
+
         MouseListener ml = new MouseAdapter() {
             //creamos el método para transferir
             //datos al presionar con el ratón
-            
+
             public void mousePressed(MouseEvent e) {
                 JComponent jc = (JComponent) e.getSource();
                 TransferHandler th = jc.getTransferHandler();
                 th.exportAsDrag(jc, e, TransferHandler.COPY);
-                
-            }            
+
+            }
         };
         k++;
         nub.addMouseListener(ml);
         roc.addMouseListener(ml);
-        
+
     }
-    
-  
-    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -205,32 +202,35 @@ public class PrincipalRana extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
-         OrdenadorFactory.getOrdenNumerico(forden).ordenar(Roca1,Roca2,Roca3,Roca4,ro1,ro2,ro3,ro4,Nube1,Nube2,Nube3,Nube4, Gif, RanaxRocaL);
+
+        ControladorOrdenar ordenar = ControladorOrdenar.getInstance();
+        ordenar.OrdenarNumeros(forden, Roca1, Roca2, Roca3, Roca4, ro1, ro2, ro3, ro4, Nube1, Nube2, Nube3, Nube4, Gif, RanaxRocaL);
+
     }//GEN-LAST:event_jLabel1MouseClicked
 
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
-           ro1.setText(" ");
+      
+        ro1.setText(" ");
         ro2.setText(" ");
         ro3.setText(" ");
         ro4.setText(" ");
-        
+
         Roca1.setVisible(true);
         Roca2.setVisible(true);
         Roca3.setVisible(true);
         Roca4.setVisible(true);
         Texto.setVisible(true);
-        
-        ControladorR r = new ControladorR();
-        r.generadorNumeros(num1, num2, num3, num4,forden);
 
-       
+        ControladorGenerarNumero generar = ControladorGenerarNumero.getInstance();
+        generar.generadorNumeros(num1, num2, num3, num4, forden);
+
         transferirTexto(num1, ro1);
         System.out.println(k);
         transferirTexto(num2, ro2);
         System.out.println(k);
-        transferirTexto(num3,ro3);
+        transferirTexto(num3, ro3);
         System.out.println(k);
-        transferirTexto(num4,ro4);
+        transferirTexto(num4, ro4);
         System.out.println(k);
     }//GEN-LAST:event_jLabel2MouseClicked
 

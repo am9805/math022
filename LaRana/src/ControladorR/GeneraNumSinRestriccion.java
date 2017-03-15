@@ -13,12 +13,11 @@ import javax.swing.JLabel;
  *
  * @author JuanPablo
  */
-public class GeneraNumSinRestriccion extends GenerarNumero {
+public class GeneraNumSinRestriccion implements IGenerarNumeroStrategy {
 
-    public GeneraNumSinRestriccion(String Generador) {
-        super(Generador);
-    }
-
+   
+  
+    @Override
     public void GenerarNumero(JLabel a, JLabel b, JLabel c, JLabel d, JLabel e) {
         int n = ThreadLocalRandom.current().nextInt(1, 2 + 1);
         int numero0;

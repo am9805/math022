@@ -13,14 +13,13 @@ import javax.swing.JLabel;
  *
  * @author JuanPablo
  */
-public class GeneraNumSecuencial extends GenerarNumero {
+public class GeneraNumSecuencial implements IGenerarNumeroStrategy  {
 
-    public GeneraNumSecuencial(String Generador) {
-        super(Generador);
-    }
-    
+  
+
+ 
         
-    
+    @Override
      public void GenerarNumero(JLabel a, JLabel b, JLabel c, JLabel d, JLabel e){
           int i = 0, cantidad = 4;
         int arreglo[] = new int[cantidad];

@@ -14,20 +14,34 @@ import javax.swing.JLabel;
 
 public class OrdenadorFactory {
 
- 
- public static OrdenarNumero getOrdenNumerico(JLabel ordenador) {
+  private static  OrdenadorFactory OrFactory ;
+    
+    public static OrdenadorFactory getInstance(){
+        OrFactory = new OrdenadorFactory();
+        return(OrFactory);
+    }
+    
+    
+ public void OrdenarNumero (JLabel ordenador , JLabel roca1, JLabel roca2, JLabel roca3, JLabel roca4,
+            JLabel numRoc1, JLabel numRoc2, JLabel numRoc3, JLabel numRoc4,
+            JLabel nube1, JLabel nube2, JLabel nube3, JLabel nube4,
+            JLabel Gif, JLabel RanaxRocaL) {
     String orden ;
     orden = ordenador.getText();
      switch(orden){
          case "Menor a Mayor":
-             return  new OrdenAscecendente(ordenador);
+             OrdenarNumero gna = new OrdenarNumero(new OrdenAscecendente());
+             gna.ordenarNum(roca1, roca2, roca3, roca4, numRoc1, numRoc2, numRoc3, numRoc4, nube1, nube2, nube3, nube4, Gif, RanaxRocaL);
              
          case "Mayor a Menor":
-             return new OrdenDescendente(ordenador);
+             OrdenarNumero gnd = new OrdenarNumero(new OrdenDescendente());
+             gnd.ordenarNum(roca1, roca2, roca3, roca4, numRoc1, numRoc2, numRoc3, numRoc4, nube1, nube2, nube3, nube4, Gif, RanaxRocaL);
                       
      }
-     return null;     
+        
  } 
+
+   
     
 
     

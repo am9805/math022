@@ -12,13 +12,9 @@ import javax.swing.JLabel;
  *
  *
  */
-public class OrdenAscecendente extends OrdenarNumero {
+public class OrdenAscecendente implements IOrdenarStrategy {
 
-    public OrdenAscecendente(JLabel ordenNumerico) {
-        super(ordenNumerico);
-    }
-
-
+  
     @Override
     public void ordenar(JLabel roca1, JLabel roca2, JLabel roca3, JLabel roca4,
             JLabel numRoc1, JLabel numRoc2, JLabel numRoc3, JLabel numRoc4,

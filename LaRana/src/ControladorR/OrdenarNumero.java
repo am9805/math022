@@ -11,36 +11,33 @@ import javax.swing.JLabel;
  *
  * @author JuanPablo
  */
-public abstract  class OrdenarNumero implements IOrdenarStrategy {
+public class OrdenarNumero  {
     
     private JLabel ordenNumerico;
+    private IOrdenarStrategy orden;
+
+    public OrdenarNumero(IOrdenarStrategy orden) {
+        this.orden = orden;
+    }
+
+    public OrdenarNumero() {
+    }
 
     public OrdenarNumero(JLabel ordenNumerico) {
         this.ordenNumerico = ordenNumerico;
     }
-
- 
     
-    /** 
-     * Metodo que sera implementado por todas las clases hija
-     * 
-     * 
-     * @return boolean Orden de los nuemros
-     */
-    @Override
-    public abstract void ordenar(JLabel roca1, JLabel roca2, JLabel roca3, JLabel roca4,
+    
+    
+    public void ordenarNum(JLabel roca1, JLabel roca2, JLabel roca3, JLabel roca4,
             JLabel numRoc1, JLabel numRoc2, JLabel numRoc3, JLabel numRoc4,
             JLabel nube1, JLabel nube2, JLabel nube3, JLabel nube4,
-            JLabel Gif, JLabel RanaxRocaL);
-
-    public JLabel getOrdenNumerico() {
-        return ordenNumerico;
+            JLabel Gif, JLabel RanaxRocaL){
+        orden.ordenar(roca1, roca2, roca3, roca4, numRoc1, numRoc2, numRoc3, numRoc4, nube1, nube2, nube3, nube4, Gif, RanaxRocaL);
+        
     }
 
-    public void setOrdenNumerico(JLabel ordenNumerico) {
-        this.ordenNumerico = ordenNumerico;
-    }
-
+ 
 
     
     

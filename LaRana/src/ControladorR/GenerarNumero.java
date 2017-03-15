@@ -11,33 +11,24 @@ import javax.swing.JLabel;
  *
  * @author JuanPablo
  */
-public abstract class GenerarNumero implements IGenerarNumeroStrategy{
-
-    private String Generador;
-
-    public GenerarNumero(String Generador) {
-        this.Generador = Generador;
-    }
-       /** 
-     * Metodo que sera implementado por todas las clases hija
-     * 
-     * 
-     * @return Numeros generados aleatoriamente 
-     */
+public class GenerarNumero {
     
-    @Override
-    public abstract void GenerarNumero(JLabel a, JLabel b, JLabel c, JLabel d, JLabel e);
+    private IGenerarNumeroStrategy  Generar;
+   
 
-    public String getGenerador() {
-        return Generador;
+    public GenerarNumero() {
     }
 
-    public void setGenerador(String Generador) {
-        this.Generador = Generador;
+    public GenerarNumero(IGenerarNumeroStrategy Generar) {
+        this.Generar = Generar;
     }
-    
-    
-    
-          
+   
+    public void GenerarNum(JLabel a, JLabel b, JLabel c, JLabel d, JLabel e){
+        Generar.GenerarNumero(a, b, c, d, e);
+    }
+                
+
+ 
     
 }
+    

@@ -6,29 +6,41 @@
 package ControladorR;
 
 import java.util.concurrent.ThreadLocalRandom;
+import javax.swing.JLabel;
 
 /**
  *
  * @author JuanPablo
  */
 public class GeneradorFactory {
-
-    public static GenerarNumero getGenerador() {
+    
+    //UTILIZAMOS SINGLETON
+    private static  GeneradorFactory GenFactory ;
+    
+    public static GeneradorFactory getInstance(){
+        GenFactory = new GeneradorFactory();
+        return(GenFactory);
+    }
+    
+    //METODO QUE GENERA LOS NUMEORS DE  ACUERDO A LA ESTRATEGIA 
+    public void GenerarNumero(JLabel a, JLabel b, JLabel c, JLabel d, JLabel e) {
         int x = (ThreadLocalRandom.current().nextInt(1, 3 + 1));
 
+        
         if (x == 1) {
-            return new GeneraNumDecenas("");
+            GenerarNumero gn = new GenerarNumero(new GeneraNumDecenas());
+            gn.GenerarNum(a, b, c, d, e);
         }
 
         if (x == 2) {
-            return new GeneraNumSinRestriccion("");
+            GenerarNumero gn = new GenerarNumero(new GeneraNumSecuencial());
+             gn.GenerarNum(a, b, c, d, e);
         }
         if (x == 3) {
-            return new GeneraNumSecuencial("");
-
+           GenerarNumero gn = new GenerarNumero(new GeneraNumSinRestriccion());
+            gn.GenerarNum(a, b, c, d, e);
         }
 
-        return null;
     }
 
 }

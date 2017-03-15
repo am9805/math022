@@ -13,12 +13,12 @@ import javax.swing.JLabel;
  *
  * @author JuanPablo
  */
-public class GeneraNumDecenas extends GenerarNumero {
+public class GeneraNumDecenas implements IGenerarNumeroStrategy  {
+
+   
     
-    public GeneraNumDecenas(String Generador) {
-        super(Generador);
-    }
-    
+  
+    @Override
     public void GenerarNumero(JLabel a, JLabel b, JLabel c, JLabel d, JLabel e) {
         
         int i = 0, cantidad = 4;
