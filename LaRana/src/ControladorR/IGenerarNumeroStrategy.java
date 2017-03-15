@@ -13,6 +13,6 @@ import javax.swing.JLabel;
  */
 public interface IGenerarNumeroStrategy {
    
-    void GenerarNumero(JLabel a, JLabel b, JLabel c, JLabel d);
+    void GenerarNumero(JLabel a, JLabel b, JLabel c, JLabel d, JLabel e);
             
 }

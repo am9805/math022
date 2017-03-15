@@ -14,15 +14,14 @@ import javax.swing.JLabel;
  * @author JuanPablo
  */
 public class GeneraNumSecuencial extends GenerarNumero {
-    
-    private String GenerarNum;
 
-    public GeneraNumSecuencial(String GenerarNum, String Generador) {
+    public GeneraNumSecuencial(String Generador) {
         super(Generador);
-        this.GenerarNum = GenerarNum;
     }
     
-     public void GenerarNumero(JLabel a, JLabel b, JLabel c, JLabel d){
+        
+    
+     public void GenerarNumero(JLabel a, JLabel b, JLabel c, JLabel d, JLabel e){
           int i = 0, cantidad = 4;
         int arreglo[] = new int[cantidad];
 
@@ -47,6 +46,7 @@ public class GeneraNumSecuencial extends GenerarNumero {
         b.setText(Integer.toString(arreglo[1]));
         c.setText(Integer.toString(arreglo[2]));
         d.setText(Integer.toString(arreglo[3]));
+        e.setText("Menor a Mayor");
      }
     
 }

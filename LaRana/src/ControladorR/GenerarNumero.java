@@ -26,7 +26,7 @@ public abstract class GenerarNumero implements IGenerarNumeroStrategy{
      */
     
     @Override
-    public abstract void GenerarNumero(JLabel a, JLabel b, JLabel c, JLabel d);
+    public abstract void GenerarNumero(JLabel a, JLabel b, JLabel c, JLabel d, JLabel e);
 
     public String getGenerador() {
         return Generador;
