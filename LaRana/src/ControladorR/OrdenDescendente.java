@@ -31,31 +31,31 @@ public class OrdenDescendente implements IOrdenarStrategy {
 
         if (numroc1 < numroc2) {
             roca2.setVisible(false);
-            numRoc2.setText(" ");
+            numRoc2.setText("");
 
         }
 
         if (numroc2 < numroc3) {
             roca3.setVisible(false);
-            numRoc3.setText(" ");
+            numRoc3.setText("");
 
         }
 
         if (numroc3 < numroc4) {
             roca4.setVisible(false);
-            numRoc4.setText(" ");
+            numRoc4.setText("");
 
         }
         if (numroc1 > numroc2 && numroc2 > numroc3 && numroc3 > numroc4) {
             Gif.setVisible(true);
-            numRoc1.setText(" ");
-            numRoc2.setText(" ");
-            numRoc3.setText(" ");
-            numRoc4.setText(" ");
-            nube1.setText(" ");
-            nube2.setText(" ");
-            nube3.setText(" ");
-            nube4.setText(" ");
+            numRoc1.setText("");
+            numRoc2.setText("");
+            numRoc3.setText("");
+            numRoc4.setText("");
+            nube1.setText("");
+            nube2.setText("");
+            nube3.setText("");
+            nube4.setText("");
             roca1.setVisible(false);
             roca2.setVisible(false);
             roca3.setVisible(false);

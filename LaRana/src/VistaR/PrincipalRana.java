@@ -2,6 +2,7 @@ package VistaR;
 
 import ControladorR.ControladorGenerarNumero;
 import ControladorR.ControladorOrdenar;
+import ControladorR.Estadisticas;
 import ControladorR.GeneradorFactory;
 import ControladorR.OrdenadorFactory;
 import java.awt.event.MouseAdapter;
@@ -10,6 +11,8 @@ import java.awt.event.MouseListener;
 import javax.swing.*;
 
 public class PrincipalRana extends javax.swing.JFrame {
+
+    int numeroEntradas = 1;
 
     public PrincipalRana() {
         initComponents();
@@ -206,15 +209,17 @@ public class PrincipalRana extends javax.swing.JFrame {
         ControladorOrdenar ordenar = ControladorOrdenar.getInstance();
         ordenar.OrdenarNumeros(forden, Roca1, Roca2, Roca3, Roca4, ro1, ro2, ro3, ro4, Nube1, Nube2, Nube3, Nube4, Gif, RanaxRocaL);
 
+
     }//GEN-LAST:event_jLabel1MouseClicked
 
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
-      
-        ro1.setText(" ");
-        ro2.setText(" ");
-        ro3.setText(" ");
-        ro4.setText(" ");
 
+        ro1.setText("");
+        ro2.setText("");
+        ro3.setText("");
+        ro4.setText("");
+        Gif.setVisible(false);
+        RanaxRocaL.setVisible(true);
         Roca1.setVisible(true);
         Roca2.setVisible(true);
         Roca3.setVisible(true);
@@ -232,6 +237,10 @@ public class PrincipalRana extends javax.swing.JFrame {
         System.out.println(k);
         transferirTexto(num4, ro4);
         System.out.println(k);
+
+        numeroEntradas = numeroEntradas + 1;
+
+        System.out.println("-------" + numeroEntradas);
     }//GEN-LAST:event_jLabel2MouseClicked
 
     /**
