@@ -203,7 +203,7 @@ public class PrincipalRana extends javax.swing.JFrame {
         Fondo.setMinimumSize(new java.awt.Dimension(1375, 745));
         Fondo.setOpaque(true);
         Fondo.setPreferredSize(new java.awt.Dimension(1375, 745));
-        getContentPane().add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 745));
+        getContentPane().add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, 580));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
