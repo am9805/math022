@@ -5,6 +5,9 @@
  */
 package ControladorR;
 
+import Modelo.OrdenadorFactory;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 import javax.swing.JLabel;
 
 /**
@@ -14,13 +17,14 @@ import javax.swing.JLabel;
 public class ControladorOrdenar {
 
     //SINGLETON PARA CONTROLADOR
-    private static  ControladorOrdenar ConOrdenar ;
+    private static ControladorOrdenar ConOrdenar;
+
     
-    public static ControladorOrdenar getInstance(){
-        ConOrdenar= new ControladorOrdenar();
-        return(ConOrdenar);
+    public static ControladorOrdenar getInstance() {
+        ConOrdenar = new ControladorOrdenar();
+        return (ConOrdenar);
     }
-    
+
     // METODO PARA ORDENAR
     public void OrdenarNumeros(JLabel ordena, JLabel roca1, JLabel roca2, JLabel roca3, JLabel roca4,
             JLabel numRoc1, JLabel numRoc2, JLabel numRoc3, JLabel numRoc4,
@@ -35,6 +39,4 @@ public class ControladorOrdenar {
 
     }
 
-    
-    
 }

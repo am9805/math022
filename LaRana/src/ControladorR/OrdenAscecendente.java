@@ -5,6 +5,7 @@
  */
 package ControladorR;
 
+import Modelo.IOrdenarStrategy;
 import java.util.Arrays;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -44,11 +45,7 @@ public class OrdenAscecendente implements IOrdenarStrategy {
 
         Arrays.sort(arreglo);
 
-        System.out.println(arreglo[0]);
-        System.out.println(arreglo[1]);
-        System.out.println(arreglo[2]);
-        System.out.println(arreglo[3]);
-
+     
         if (!"".equals(roc1)) {
 
             int numroc1 = Integer.parseInt(roc1);
@@ -58,8 +55,7 @@ public class OrdenAscecendente implements IOrdenarStrategy {
             } else {
                 numRoc1.setText("");
                 JOptionPane.showMessageDialog(null, "Te has equivocao, vuelve a intentar");
-
-//          sout    
+                Estaditisticarana.setErrorAscendente(Estaditisticarana.getErrorAscendente() + 1);
             }
         }
         if (!"".equals(roc2)) {
@@ -70,7 +66,7 @@ public class OrdenAscecendente implements IOrdenarStrategy {
             } else {
                 numRoc2.setText("");
                 JOptionPane.showMessageDialog(null, "Te has equivocao, vuelve a intentar");
-
+                Estaditisticarana.setErrorAscendente(Estaditisticarana.getErrorAscendente() + 1);
             }
         }
         if (!"".equals(roc3)) {
@@ -81,7 +77,7 @@ public class OrdenAscecendente implements IOrdenarStrategy {
             } else {
                 numRoc3.setText("");
                 JOptionPane.showMessageDialog(null, "Te has equivocao, vuelve a intenntar");
-//             
+                Estaditisticarana.setErrorAscendente(Estaditisticarana.getErrorAscendente() + 1);
             }
         }
 
@@ -95,10 +91,11 @@ public class OrdenAscecendente implements IOrdenarStrategy {
             } else {
                 numRoc4.setText("");
                 JOptionPane.showMessageDialog(null, "Te has equivocao, vuelve a intentar");
-//          
+                Estaditisticarana.setErrorAscendente(Estaditisticarana.getErrorAscendente() + 1);
             }
-
+            
         }
-
+        System.out.println("el error"+ Estaditisticarana.getErrorAscendente());
+  
     }
 }

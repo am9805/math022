@@ -5,6 +5,7 @@
  */
 package ControladorR;
 
+import Modelo.GeneradorFactory;
 import javax.swing.JLabel;
 
 /**

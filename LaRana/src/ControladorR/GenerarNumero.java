@@ -5,6 +5,7 @@
  */
 package ControladorR;
 
+import Modelo.IGenerarNumeroStrategy;
 import javax.swing.JLabel;
 
 /**

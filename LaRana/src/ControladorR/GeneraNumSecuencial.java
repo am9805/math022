@@ -6,6 +6,7 @@
 package ControladorR;
 
 import ControladorR.GenerarNumero;
+import Modelo.IGenerarNumeroStrategy;
 import java.util.concurrent.ThreadLocalRandom;
 import javax.swing.JLabel;
 

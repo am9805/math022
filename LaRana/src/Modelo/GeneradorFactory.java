@@ -1,10 +1,16 @@
+package Modelo;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ControladorR;
 
+
+import ControladorR.GeneraNumDecenas;
+import ControladorR.GeneraNumSecuencial;
+import ControladorR.GeneraNumSinRestriccion;
+import ControladorR.GenerarNumero;
 import java.util.concurrent.ThreadLocalRandom;
 import javax.swing.JLabel;
 

@@ -6,6 +6,7 @@
 package ControladorR;
 
 import ControladorR.OrdenarNumero;
+import Modelo.IOrdenarStrategy;
 import java.util.Arrays;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -22,15 +23,7 @@ public class OrdenDescendente implements IOrdenarStrategy {
             JLabel nube1, JLabel nube2, JLabel nube3, JLabel nube4,
             JLabel Gif, JLabel RanaxRocaL) {
 
-//      
-//        String roc1 = numRoc1.getText();
-//        int numroc1 = Integer.parseInt(roc1);
-//        String roc2 = numRoc2.getText();
-//        int numroc2 = Integer.parseInt(roc2);
-//        String roc3 = numRoc3.getText();
-//        int numroc3 = Integer.parseInt(roc3);
-//        String roc4 = numRoc4.getText();
-//        int numroc4 = Integer.parseInt(roc4);
+
 
         String roc1 = numRoc1.getText();
         String roc2 = numRoc2.getText();
@@ -55,10 +48,6 @@ public class OrdenDescendente implements IOrdenarStrategy {
 
         Arrays.sort(arreglo);
 
-        System.out.println(arreglo[0]);
-        System.out.println(arreglo[1]);
-        System.out.println(arreglo[2]);
-        System.out.println(arreglo[3]);
 
         if (!"".equals(roc1)) {
 
@@ -68,6 +57,7 @@ public class OrdenDescendente implements IOrdenarStrategy {
             } else {
                 numRoc1.setText("");
                 JOptionPane.showMessageDialog(null, "Te has equivocao, vuelve a intentar");
+               
 //        
             }
         }
