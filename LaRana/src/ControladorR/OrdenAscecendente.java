@@ -52,52 +52,49 @@ public class OrdenAscecendente implements IOrdenarStrategy {
         if (!"".equals(roc1)) {
 
             int numroc1 = Integer.parseInt(roc1);
-            System.out.println("////////");
-            System.out.println(numroc1);
-            System.out.println(arreglo[0]);
-            System.out.println("///////");
             if (arreglo[0] == numroc1) {
                 roca2.setVisible(true);
-                System.out.println("estoy aqui");
+
             } else {
                 numRoc1.setText("");
-                JOptionPane.showMessageDialog(null, "Erraste");
-                
+                JOptionPane.showMessageDialog(null, "Te has equivocao, vuelve a intentar");
+
 //          sout    
             }
         }
-        if (roc2 != "") {
+        if (!"".equals(roc2)) {
 
             int numroc2 = Integer.parseInt(roc2);
             if (arreglo[1] == numroc2) {
                 roca3.setVisible(true);
             } else {
                 numRoc2.setText("");
-                JOptionPane.showMessageDialog(null, "Erraste");
-                System.out.println("y aquí tambien");//              
+                JOptionPane.showMessageDialog(null, "Te has equivocao, vuelve a intentar");
+
             }
         }
-        if (roc3 != "") {
+        if (!"".equals(roc3)) {
 
             int numroc3 = Integer.parseInt(roc3);
             if (arreglo[2] == numroc3) {
                 roca4.setVisible(true);
             } else {
                 numRoc3.setText("");
-                JOptionPane.showMessageDialog(null, "Erraste");
+                JOptionPane.showMessageDialog(null, "Te has equivocao, vuelve a intenntar");
 //             
             }
         }
 
-        if (roc4 != "") {
+        if (!"".equals(roc4)) {
 
             int numroc4 = Integer.parseInt(roc4);
             if (arreglo[3] == numroc4) {
 
-                JOptionPane.showMessageDialog(null, "Ganaste");
+                JOptionPane.showMessageDialog(null, "GANASTE");
+                Gif.setVisible(true);
             } else {
                 numRoc4.setText("");
-                JOptionPane.showMessageDialog(null, "Erraste");
+                JOptionPane.showMessageDialog(null, "Te has equivocao, vuelve a intentar");
 //          
             }
 

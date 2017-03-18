@@ -1,4 +1,4 @@
-    package VistaR;
+package VistaR;
 
 import ControladorR.ControladorGenerarNumero;
 import ControladorR.ControladorOrdenar;
@@ -17,7 +17,8 @@ public class PrincipalRana extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
         Gif.setVisible(false);
-       // Texto.setVisible(false);
+
+        // Texto.setVisible(false);
         Roca1.setVisible(true);
         Roca2.setVisible(false);
         Roca3.setVisible(false);
@@ -74,10 +75,14 @@ public class PrincipalRana extends javax.swing.JFrame {
         Nube1 = new javax.swing.JLabel();
         Nube2 = new javax.swing.JLabel();
         TITULO = new javax.swing.JLabel();
-        terminar = new javax.swing.JLabel();
         jugar = new javax.swing.JLabel();
         Estanque = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        avanzar = new javax.swing.JLabel();
+        texto1 = new javax.swing.JLabel();
+        texto2 = new javax.swing.JLabel();
+        texto3 = new javax.swing.JLabel();
+        texto4 = new javax.swing.JLabel();
+        Fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1375, 745));
@@ -146,7 +151,7 @@ public class PrincipalRana extends javax.swing.JFrame {
         getContentPane().add(Roca3, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 700, 160, 110));
 
         forden.setFont(new java.awt.Font("Tempus Sans ITC", 1, 28)); // NOI18N
-        getContentPane().add(forden, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 510, 280, 40));
+        getContentPane().add(forden, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 510, 280, 40));
 
         Gif.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
         Gif.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VistaR/Recursos/output_BnuDB1.gif"))); // NOI18N
@@ -166,57 +171,53 @@ public class PrincipalRana extends javax.swing.JFrame {
 
         TITULO.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         TITULO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VistaR/Recursos/Titulo2.png"))); // NOI18N
-        getContentPane().add(TITULO, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 0, 330, 150));
-
-        terminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VistaR/Recursos/arbolTerminar1.png"))); // NOI18N
-        terminar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                terminarMouseClicked(evt);
-            }
-        });
-        getContentPane().add(terminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 310, -1, -1));
+        getContentPane().add(TITULO, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 50, 330, 150));
 
         jugar.setFont(new java.awt.Font("Snap ITC", 1, 48)); // NOI18N
-        jugar.setText("JUGAR ");
+        jugar.setForeground(new java.awt.Color(255, 255, 255));
+        jugar.setText("JUGEMOS");
         jugar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jugarMouseClicked(evt);
             }
         });
-        getContentPane().add(jugar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 260, -1));
+        getContentPane().add(jugar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 350, 330, -1));
 
         Estanque.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         Estanque.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VistaR/Recursos/estanque1.png"))); // NOI18N
         getContentPane().add(Estanque, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 620, 1250, 230));
 
-        jButton1.setText("Verificar Numero");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+        avanzar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VistaR/Recursos/arbolTerminar1.png"))); // NOI18N
+        avanzar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                avanzarMouseClicked(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 430, -1, -1));
+        getContentPane().add(avanzar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 420, -1, -1));
+
+        texto1.setFont(new java.awt.Font("Tempus Sans ITC", 1, 20)); // NOI18N
+        texto1.setText(" La rana hasta el loto quiere llegar  saltando en a roca lo podrán lograr.  ");
+        getContentPane().add(texto1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 450, 690, 60));
+
+        texto2.setFont(new java.awt.Font("Tempus Sans ITC", 1, 20)); // NOI18N
+        texto2.setText("De                                                         las debes ordenar, arrastra los numeros");
+        getContentPane().add(texto2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 520, 740, -1));
+
+        texto3.setFont(new java.awt.Font("Tempus Sans ITC", 1, 20)); // NOI18N
+        texto3.setText("Y si el tiempo se acaba… ¡la ranita a chapucear!");
+        getContentPane().add(texto3, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 570, -1, -1));
+
+        texto4.setFont(new java.awt.Font("Snap ITC", 1, 14)); // NOI18N
+        texto4.setForeground(new java.awt.Color(255, 255, 255));
+        texto4.setText("HAS CLIC AQUI PARA QUE  ");
+        getContentPane().add(texto4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 340, -1, -1));
+
+        Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VistaR/Recursos/Fondito2.jpg"))); // NOI18N
+        Fondo.setText("jLabel5");
+        getContentPane().add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void terminarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terminarMouseClicked
-////
-//        String numeroNube1 = num1.getText();
-//        int numNube1 = Integer.parseInt(numeroNube1);
-//        System.out.println(numNube1);
-//        
-//         String numeroroc1 = ro1.getText();
-//        int numroroc1 = Integer.parseInt(numeroroc1);
-//        System.out.println(numroroc1);
-//        
-//          
-        ControladorOrdenar ordenar = ControladorOrdenar.getInstance();
-       
-        ordenar.OrdenarNumeros(forden, Roca1, Roca2, Roca3, Roca4, ro1, ro2, ro3, ro4, num1, num2, num3, num4, Gif, RanaxRocaL);
-
-
-    }//GEN-LAST:event_terminarMouseClicked
 
     private void jugarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jugarMouseClicked
 
@@ -230,7 +231,7 @@ public class PrincipalRana extends javax.swing.JFrame {
         Roca2.setVisible(false);
         Roca3.setVisible(false);
         Roca4.setVisible(false);
-      //  Texto.setVisible(true);
+        //  Texto.setVisible(true);
 
         ControladorGenerarNumero generar = ControladorGenerarNumero.getInstance();
         generar.generadorNumeros(num1, num2, num3, num4, forden);
@@ -245,9 +246,12 @@ public class PrincipalRana extends javax.swing.JFrame {
         System.out.println("-------" + numeroEntradas);
     }//GEN-LAST:event_jugarMouseClicked
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-      
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void avanzarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_avanzarMouseClicked
+       
+        ControladorOrdenar ordenar = ControladorOrdenar.getInstance();
+        ordenar.OrdenarNumeros(forden, Roca1, Roca2, Roca3, Roca4, ro1, ro2, ro3, ro4, num1, num2, num3, num4, Gif, RanaxRocaL);
+
+    }//GEN-LAST:event_avanzarMouseClicked
 
     /**
      * @param args the command line arguments
@@ -286,6 +290,7 @@ public class PrincipalRana extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Estanque;
+    private javax.swing.JLabel Fondo;
     private javax.swing.JLabel Gif;
     private javax.swing.JLabel Nube1;
     private javax.swing.JLabel Nube2;
@@ -297,8 +302,8 @@ public class PrincipalRana extends javax.swing.JFrame {
     private javax.swing.JLabel Roca3;
     private javax.swing.JLabel Roca4;
     private javax.swing.JLabel TITULO;
+    private javax.swing.JLabel avanzar;
     private javax.swing.JLabel forden;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jugar;
     private javax.swing.JLabel num1;
     private javax.swing.JLabel num2;
@@ -308,7 +313,10 @@ public class PrincipalRana extends javax.swing.JFrame {
     private javax.swing.JLabel ro2;
     private javax.swing.JLabel ro3;
     private javax.swing.JLabel ro4;
-    private javax.swing.JLabel terminar;
+    private javax.swing.JLabel texto1;
+    private javax.swing.JLabel texto2;
+    private javax.swing.JLabel texto3;
+    private javax.swing.JLabel texto4;
     // End of variables declaration//GEN-END:variables
 
 }

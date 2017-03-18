@@ -60,49 +60,51 @@ public class OrdenDescendente implements IOrdenarStrategy {
         System.out.println(arreglo[2]);
         System.out.println(arreglo[3]);
 
-        if (roc1 != "") {
+        if (!"".equals(roc1)) {
 
             int numroc1 = Integer.parseInt(roc1);
             if (arreglo[3] == numroc1) {
                 roca2.setVisible(true);
             } else {
                 numRoc1.setText("");
-                JOptionPane.showMessageDialog(null, "Erraste");
+                JOptionPane.showMessageDialog(null, "Te has equivocao, vuelve a intentar");
 //        
             }
         }
-        if (roc2 != "") {
+        if (!"".equals(roc2)) {
             
             int numroc2 = Integer.parseInt(roc2);
             if (arreglo[2] == numroc2) {
                 roca3.setVisible(true);
             } else {
                 numRoc2.setText("");
-                JOptionPane.showMessageDialog(null, "Erraste");
+                JOptionPane.showMessageDialog(null, "Te has equivocao, vuelve a intentar");
 //              
             }
         }
-        if (roc3 != "") {
+        if (!"".equals(roc3)) {
             
             int numroc3 = Integer.parseInt(roc3);
             if (arreglo[1] == numroc3) {
                 roca4.setVisible(true);
             } else {
                 numRoc3.setText("");
-                JOptionPane.showMessageDialog(null, "Erraste");
+                JOptionPane.showMessageDialog(null, "Te has equivocao, vuelve a intentar");
 //             
             }
         }
 
-        if (roc4 != "") {
+        if (!"".equals(roc4)) {
        
             int numroc4 = Integer.parseInt(roc4);
             if (arreglo[0] == numroc4) {
 
-                JOptionPane.showMessageDialog(null, "Ganaste");
+                JOptionPane.showMessageDialog(null, "GANASTE");
+                RanaxRocaL.setVisible(false);
+                Gif.setVisible(true);
             } else {
                 numRoc4.setText("");
-                JOptionPane.showMessageDialog(null, "Erraste");
+                JOptionPane.showMessageDialog(null, "Te has equivocao, vuelve a intentar");
 //          
             }
 
