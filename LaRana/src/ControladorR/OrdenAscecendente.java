@@ -95,7 +95,7 @@ public class OrdenAscecendente implements IOrdenarStrategy {
             }
             
         }
-        System.out.println("el error"+ Estaditisticarana.getErrorAscendente());
+      
   
     }
 }

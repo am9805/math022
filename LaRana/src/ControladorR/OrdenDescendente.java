@@ -57,7 +57,7 @@ public class OrdenDescendente implements IOrdenarStrategy {
             } else {
                 numRoc1.setText("");
                 JOptionPane.showMessageDialog(null, "Te has equivocao, vuelve a intentar");
-               
+                Estaditisticarana.setErrorDescendente(Estaditisticarana.getErrorDescendente() + 1);
 //        
             }
         }
@@ -69,6 +69,7 @@ public class OrdenDescendente implements IOrdenarStrategy {
             } else {
                 numRoc2.setText("");
                 JOptionPane.showMessageDialog(null, "Te has equivocao, vuelve a intentar");
+                 Estaditisticarana.setErrorDescendente(Estaditisticarana.getErrorDescendente() + 1);
 //              
             }
         }
@@ -80,6 +81,7 @@ public class OrdenDescendente implements IOrdenarStrategy {
             } else {
                 numRoc3.setText("");
                 JOptionPane.showMessageDialog(null, "Te has equivocao, vuelve a intentar");
+                Estaditisticarana.setErrorDescendente(Estaditisticarana.getErrorDescendente() + 1);
 //             
             }
         }
@@ -95,6 +97,7 @@ public class OrdenDescendente implements IOrdenarStrategy {
             } else {
                 numRoc4.setText("");
                 JOptionPane.showMessageDialog(null, "Te has equivocao, vuelve a intentar");
+                 Estaditisticarana.setErrorDescendente(Estaditisticarana.getErrorDescendente() + 1);
 //          
             }
 
