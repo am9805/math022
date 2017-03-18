@@ -5,8 +5,9 @@
  */
 package ControladorR;
 
-import ControladorR.OrdenarNumero;
+import java.util.Arrays;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -14,60 +15,93 @@ import javax.swing.JLabel;
  */
 public class OrdenAscecendente implements IOrdenarStrategy {
 
-  
     @Override
     public void ordenar(JLabel roca1, JLabel roca2, JLabel roca3, JLabel roca4,
             JLabel numRoc1, JLabel numRoc2, JLabel numRoc3, JLabel numRoc4,
             JLabel nube1, JLabel nube2, JLabel nube3, JLabel nube4,
             JLabel Gif, JLabel RanaxRocaL) {
 
+        String roc1 = numRoc1.getText();
+        String roc2 = numRoc2.getText();
+        String roc3 = numRoc3.getText();
+        String roc4 = numRoc4.getText();
 
-            String roc1 = numRoc1.getText();
+        String numeroNube1 = nube1.getText();
+        int numNube1 = Integer.parseInt(numeroNube1);
+        String numeroNube2 = nube2.getText();
+        int numNube2 = Integer.parseInt(numeroNube2);
+        String numeroNube3 = nube3.getText();
+        int numNube3 = Integer.parseInt(numeroNube3);
+        String numeroNube4 = nube4.getText();
+        int numNube4 = Integer.parseInt(numeroNube4);
+
+        int arreglo[] = new int[4];
+
+        arreglo[0] = numNube1;
+        arreglo[1] = numNube2;
+        arreglo[2] = numNube3;
+        arreglo[3] = numNube4;
+
+        Arrays.sort(arreglo);
+
+        System.out.println(arreglo[0]);
+        System.out.println(arreglo[1]);
+        System.out.println(arreglo[2]);
+        System.out.println(arreglo[3]);
+
+        if (!"".equals(roc1)) {
+
             int numroc1 = Integer.parseInt(roc1);
-            String roc2 = numRoc2.getText();
-            int numroc2 = Integer.parseInt(roc2);
-            String roc3 = numRoc3.getText();
-            int numroc3 = Integer.parseInt(roc3);
-            String roc4 = numRoc4.getText();
-            int numroc4 = Integer.parseInt(roc4);
-
-            if (numroc1 > numroc2) {
-                roca1.setVisible(false);
+            System.out.println("////////");
+            System.out.println(numroc1);
+            System.out.println(arreglo[0]);
+            System.out.println("///////");
+            if (arreglo[0] == numroc1) {
+                roca2.setVisible(true);
+                System.out.println("estoy aqui");
+            } else {
                 numRoc1.setText("");
-
-            }
-
-            if (numroc2 > numroc3) {
-                roca2.setVisible(false);
-                numRoc2.setText("");
-
-            }
-
-            if (numroc3 > numroc4) {
-                roca3.setVisible(false);
-                numRoc3.setText("");
-
-            } if(numroc1 < numroc2 && numroc2 < numroc3 && numroc3 < numroc4) {
-                Gif.setVisible(true);
-                numRoc1.setText("");
-                numRoc2.setText("");
-                numRoc3.setText("");
-                numRoc4.setText("");
-                nube1.setText("");
-                nube2.setText("");
-                nube3.setText("");
-                nube4.setText("");
-                roca1.setVisible(false);
-                roca2.setVisible(false);
-                roca3.setVisible(false);
-                roca4.setVisible(false);
-                RanaxRocaL.setVisible(false);
+                JOptionPane.showMessageDialog(null, "Erraste");
                 
+//          sout    
+            }
+        }
+        if (roc2 != "") {
+
+            int numroc2 = Integer.parseInt(roc2);
+            if (arreglo[1] == numroc2) {
+                roca3.setVisible(true);
+            } else {
+                numRoc2.setText("");
+                JOptionPane.showMessageDialog(null, "Erraste");
+                System.out.println("y aquí tambien");//              
+            }
+        }
+        if (roc3 != "") {
+
+            int numroc3 = Integer.parseInt(roc3);
+            if (arreglo[2] == numroc3) {
+                roca4.setVisible(true);
+            } else {
+                numRoc3.setText("");
+                JOptionPane.showMessageDialog(null, "Erraste");
+//             
+            }
+        }
+
+        if (roc4 != "") {
+
+            int numroc4 = Integer.parseInt(roc4);
+            if (arreglo[3] == numroc4) {
+
+                JOptionPane.showMessageDialog(null, "Ganaste");
+            } else {
+                numRoc4.setText("");
+                JOptionPane.showMessageDialog(null, "Erraste");
+//          
             }
 
         }
- 
 
-    
-
+    }
 }

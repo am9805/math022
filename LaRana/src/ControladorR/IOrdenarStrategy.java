@@ -18,5 +18,7 @@ public interface IOrdenarStrategy {
             JLabel nube1, JLabel nube2, JLabel nube3, JLabel nube4,
             JLabel Gif, JLabel RanaxRocaL);
       
+      
+      
     
 }

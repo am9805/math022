@@ -1,4 +1,4 @@
-package VistaR;
+    package VistaR;
 
 import ControladorR.ControladorGenerarNumero;
 import ControladorR.ControladorOrdenar;
@@ -17,8 +17,8 @@ public class PrincipalRana extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
         Gif.setVisible(false);
-        Texto.setVisible(false);
-        Roca1.setVisible(false);
+       // Texto.setVisible(false);
+        Roca1.setVisible(true);
         Roca2.setVisible(false);
         Roca3.setVisible(false);
         Roca4.setVisible(false);
@@ -74,105 +74,99 @@ public class PrincipalRana extends javax.swing.JFrame {
         Nube1 = new javax.swing.JLabel();
         Nube2 = new javax.swing.JLabel();
         TITULO = new javax.swing.JLabel();
-        Texto = new javax.swing.JLabel();
         terminar = new javax.swing.JLabel();
         jugar = new javax.swing.JLabel();
-        pergamino = new javax.swing.JLabel();
         Estanque = new javax.swing.JLabel();
-        Fondo = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1375, 745));
         setMinimumSize(new java.awt.Dimension(1375, 745));
-        setPreferredSize(new java.awt.Dimension(1375, 745));
+        setPreferredSize(new java.awt.Dimension(1200, 900));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         RanaxRocaL.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VistaR/Recursos/RanaxRoca.png"))); // NOI18N
-        getContentPane().add(RanaxRocaL, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 490, 180, 160));
+        getContentPane().add(RanaxRocaL, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 640, 180, 160));
 
         ro1.setFont(new java.awt.Font("DejaVu Sans", 1, 24)); // NOI18N
         ro1.setForeground(new java.awt.Color(1, 1, 1));
         ro1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(ro1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 570, 140, 80));
+        getContentPane().add(ro1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 720, 140, 80));
 
         ro2.setFont(new java.awt.Font("DejaVu Sans", 1, 24)); // NOI18N
         ro2.setForeground(new java.awt.Color(1, 1, 1));
         ro2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(ro2, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 570, 140, 80));
+        getContentPane().add(ro2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 720, 140, 80));
 
         ro3.setFont(new java.awt.Font("DejaVu Sans", 1, 24)); // NOI18N
         ro3.setForeground(new java.awt.Color(1, 1, 1));
         ro3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(ro3, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 550, 160, 110));
+        getContentPane().add(ro3, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 700, 160, 110));
 
         ro4.setFont(new java.awt.Font("DejaVu Sans", 1, 24)); // NOI18N
         ro4.setForeground(new java.awt.Color(1, 1, 1));
         ro4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(ro4, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 570, 140, 80));
+        getContentPane().add(ro4, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 720, 140, 80));
 
         num1.setFont(new java.awt.Font("DejaVu Sans", 1, 24)); // NOI18N
         num1.setForeground(new java.awt.Color(1, 1, 1));
         num1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(num1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 110, 170, 110));
+        getContentPane().add(num1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 180, 170, 110));
 
         num2.setFont(new java.awt.Font("DejaVu Sans", 1, 24)); // NOI18N
         num2.setForeground(new java.awt.Color(1, 1, 1));
         num2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(num2, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 240, 170, 110));
+        getContentPane().add(num2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 310, 170, 110));
 
         num3.setFont(new java.awt.Font("DejaVu Sans", 1, 24)); // NOI18N
         num3.setForeground(new java.awt.Color(1, 1, 1));
         num3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(num3, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 110, 170, 110));
+        getContentPane().add(num3, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 180, 170, 110));
 
         num4.setFont(new java.awt.Font("DejaVu Sans", 1, 24)); // NOI18N
         num4.setForeground(new java.awt.Color(1, 1, 1));
         num4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(num4, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 170, 170, 110));
+        getContentPane().add(num4, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 240, 170, 110));
 
         Roca1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VistaR/Recursos/Rocka2.png"))); // NOI18N
-        getContentPane().add(Roca1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 570, 160, 80));
+        getContentPane().add(Roca1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 720, 160, 80));
 
         Roca2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VistaR/Recursos/Rocka2.png"))); // NOI18N
-        getContentPane().add(Roca2, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 570, 160, 80));
+        getContentPane().add(Roca2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 720, 160, 80));
 
         Roca4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VistaR/Recursos/Rocka2.png"))); // NOI18N
-        getContentPane().add(Roca4, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 570, 170, 80));
+        getContentPane().add(Roca4, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 720, 170, 80));
 
         Nube3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VistaR/Recursos/Nube .png"))); // NOI18N
         Nube3.setText("jLabel1");
-        getContentPane().add(Nube3, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 110, 170, 110));
+        getContentPane().add(Nube3, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 180, 170, 110));
 
         Roca3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VistaR/Recursos/Rocka2.png"))); // NOI18N
-        getContentPane().add(Roca3, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 550, 160, 110));
+        getContentPane().add(Roca3, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 700, 160, 110));
 
-        forden.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
-        getContentPane().add(forden, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 400, 280, 40));
+        forden.setFont(new java.awt.Font("Tempus Sans ITC", 1, 28)); // NOI18N
+        getContentPane().add(forden, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 510, 280, 40));
 
         Gif.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
         Gif.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VistaR/Recursos/output_BnuDB1.gif"))); // NOI18N
-        getContentPane().add(Gif, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 370, 990, 290));
+        getContentPane().add(Gif, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 520, 990, 290));
 
         Nube4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VistaR/Recursos/Nube .png"))); // NOI18N
         Nube4.setText("jLabel1");
-        getContentPane().add(Nube4, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 170, 170, 110));
+        getContentPane().add(Nube4, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 240, 170, 110));
 
         Nube1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VistaR/Recursos/Nube .png"))); // NOI18N
         Nube1.setText("jLabel1");
-        getContentPane().add(Nube1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 120, 170, 110));
+        getContentPane().add(Nube1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 190, 170, 110));
 
         Nube2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VistaR/Recursos/Nube .png"))); // NOI18N
         Nube2.setText("jLabel1");
-        getContentPane().add(Nube2, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 240, 170, 110));
+        getContentPane().add(Nube2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 310, 170, 110));
 
         TITULO.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         TITULO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VistaR/Recursos/Titulo2.png"))); // NOI18N
         getContentPane().add(TITULO, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 0, 330, 150));
-
-        Texto.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
-        Texto.setText("Debes ordenar los numeros de ");
-        getContentPane().add(Texto, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 360, -1, -1));
 
         terminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VistaR/Recursos/arbolTerminar1.png"))); // NOI18N
         terminar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -180,7 +174,7 @@ public class PrincipalRana extends javax.swing.JFrame {
                 terminarMouseClicked(evt);
             }
         });
-        getContentPane().add(terminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 280, -1, -1));
+        getContentPane().add(terminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 310, -1, -1));
 
         jugar.setFont(new java.awt.Font("Snap ITC", 1, 48)); // NOI18N
         jugar.setText("JUGAR ");
@@ -189,29 +183,37 @@ public class PrincipalRana extends javax.swing.JFrame {
                 jugarMouseClicked(evt);
             }
         });
-        getContentPane().add(jugar, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 250, 200, -1));
-
-        pergamino.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VistaR/Recursos/Letreroccc.png"))); // NOI18N
-        getContentPane().add(pergamino, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, -1));
+        getContentPane().add(jugar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 260, -1));
 
         Estanque.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         Estanque.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VistaR/Recursos/estanque1.png"))); // NOI18N
-        getContentPane().add(Estanque, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 470, 1250, 230));
+        getContentPane().add(Estanque, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 620, 1250, 230));
 
-        Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VistaR/Recursos/Fondito2.jpg"))); // NOI18N
-        Fondo.setMaximumSize(new java.awt.Dimension(1375, 745));
-        Fondo.setMinimumSize(new java.awt.Dimension(1375, 745));
-        Fondo.setOpaque(true);
-        Fondo.setPreferredSize(new java.awt.Dimension(1375, 745));
-        getContentPane().add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, 580));
+        jButton1.setText("Verificar Numero");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 430, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void terminarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terminarMouseClicked
-
+////
+//        String numeroNube1 = num1.getText();
+//        int numNube1 = Integer.parseInt(numeroNube1);
+//        System.out.println(numNube1);
+//        
+//         String numeroroc1 = ro1.getText();
+//        int numroroc1 = Integer.parseInt(numeroroc1);
+//        System.out.println(numroroc1);
+//        
+//          
         ControladorOrdenar ordenar = ControladorOrdenar.getInstance();
-        ordenar.OrdenarNumeros(forden, Roca1, Roca2, Roca3, Roca4, ro1, ro2, ro3, ro4, Nube1, Nube2, Nube3, Nube4, Gif, RanaxRocaL);
+       
+        ordenar.OrdenarNumeros(forden, Roca1, Roca2, Roca3, Roca4, ro1, ro2, ro3, ro4, num1, num2, num3, num4, Gif, RanaxRocaL);
 
 
     }//GEN-LAST:event_terminarMouseClicked
@@ -225,10 +227,10 @@ public class PrincipalRana extends javax.swing.JFrame {
         Gif.setVisible(false);
         RanaxRocaL.setVisible(true);
         Roca1.setVisible(true);
-        Roca2.setVisible(true);
-        Roca3.setVisible(true);
-        Roca4.setVisible(true);
-        Texto.setVisible(true);
+        Roca2.setVisible(false);
+        Roca3.setVisible(false);
+        Roca4.setVisible(false);
+      //  Texto.setVisible(true);
 
         ControladorGenerarNumero generar = ControladorGenerarNumero.getInstance();
         generar.generadorNumeros(num1, num2, num3, num4, forden);
@@ -242,6 +244,10 @@ public class PrincipalRana extends javax.swing.JFrame {
 
         System.out.println("-------" + numeroEntradas);
     }//GEN-LAST:event_jugarMouseClicked
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+      
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -280,7 +286,6 @@ public class PrincipalRana extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Estanque;
-    private javax.swing.JLabel Fondo;
     private javax.swing.JLabel Gif;
     private javax.swing.JLabel Nube1;
     private javax.swing.JLabel Nube2;
@@ -292,14 +297,13 @@ public class PrincipalRana extends javax.swing.JFrame {
     private javax.swing.JLabel Roca3;
     private javax.swing.JLabel Roca4;
     private javax.swing.JLabel TITULO;
-    private javax.swing.JLabel Texto;
     private javax.swing.JLabel forden;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jugar;
     private javax.swing.JLabel num1;
     private javax.swing.JLabel num2;
     private javax.swing.JLabel num3;
     private javax.swing.JLabel num4;
-    private javax.swing.JLabel pergamino;
     private javax.swing.JLabel ro1;
     private javax.swing.JLabel ro2;
     private javax.swing.JLabel ro3;
