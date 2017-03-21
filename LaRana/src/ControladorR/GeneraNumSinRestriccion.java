@@ -1,76 +1,40 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package ControladorR;
 
-import ControladorR.GenerarNumero;
 import Modelo.IGenerarNumeroStrategy;
 import java.util.concurrent.ThreadLocalRandom;
+import static java.util.concurrent.ThreadLocalRandom.current;
 import javax.swing.JLabel;
 
-/**
- *
- * @author JuanPablo
- */
 public class GeneraNumSinRestriccion implements IGenerarNumeroStrategy {
 
-   
-  
     @Override
     public void GenerarNumero(JLabel a, JLabel b, JLabel c, JLabel d, JLabel e) {
         int n = ThreadLocalRandom.current().nextInt(1, 2 + 1);
-        int numero0;
-        int numero1;
-        int numero2;
-        int numero3;
+        int limiteInferior;
+        int limiteSuperior;
+        int arreglo[] = new int[4];
         if (n == 2) {
-            int i = 0, cantidad = 4;
-            int arreglo[] = new int[cantidad];
-
-            arreglo[i] = (ThreadLocalRandom.current().nextInt(100, 999 + 1));
-            for (i = 1; i < cantidad; i++) {
-                arreglo[i] = (int) (ThreadLocalRandom.current().nextInt(100, 999 + 1));
-                for (int j = 0; j < i; j++) {
-                    if (arreglo[i] == arreglo[j]) {
-                        i--;
-                    }
-                }
-            }
-
-            for (int k = 0; k < cantidad; k++) {
-                System.out.print((k + 1) + ".- " + arreglo[k] + "\n");
-            }
-            a.setText(Integer.toString(arreglo[0]));
-            b.setText(Integer.toString(arreglo[1]));
-            c.setText(Integer.toString(arreglo[2]));
-            d.setText(Integer.toString(arreglo[3]));
-            e.setText("Mayor a Menor");
+            limiteInferior = 100;
+            limiteSuperior = 999;
         } else {
-
-            int i = 0, cantidad = 4;
-            int arreglo[] = new int[cantidad];
-
-            arreglo[i] = (ThreadLocalRandom.current().nextInt(10, 99 + 1));
-            for (i = 1; i < cantidad; i++) {
-                arreglo[i] = (int) (ThreadLocalRandom.current().nextInt(10, 99 + 1));
-                for (int j = 0; j < i; j++) {
-                    if (arreglo[i] == arreglo[j]) {
-                        i--;
-                    }
+            limiteInferior = 10;
+            limiteSuperior = 99;
+        }
+        arreglo[0] = (current().nextInt(limiteInferior, limiteSuperior + 1));
+        for (int i = 1; i < 4; i++) {
+            arreglo[i] = (int) (current().nextInt(limiteInferior, limiteSuperior + 1));
+            for (int j = 0; j < i; j++) {
+                if (arreglo[i] == arreglo[j]) {
+                    i--;
                 }
             }
-
-            for (int k = 0; k < cantidad; k++) {
-                System.out.print((k + 1) + ".- " + arreglo[k] + "\n");
-            }
-            a.setText(Integer.toString(arreglo[0]));
-            b.setText(Integer.toString(arreglo[1]));
-            c.setText(Integer.toString(arreglo[2]));
-            d.setText(Integer.toString(arreglo[3]));
-            e.setText("Mayor a Menor");
         }
+        a.setText(Integer.toString(arreglo[0]));
+        b.setText(Integer.toString(arreglo[1]));
+        c.setText(Integer.toString(arreglo[2]));
+        d.setText(Integer.toString(arreglo[3]));
+        e.setText("Mayor a Menor");
 
     }
 
