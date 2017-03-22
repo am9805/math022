@@ -7,10 +7,11 @@ package ControladorR;
 
 import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
-
 /**
  *
- * @author JuanPablo
+ *JUAN PABLO ROMERO
+ * ANGELICA ARROYAVE
+ * SANTIAGO BEDOYA
  */
 public class EstadisticaRana {
 
@@ -22,12 +23,15 @@ public class EstadisticaRana {
     public EstadisticaRana() {
     }
 
+    //CONSTRUCTOR PARA ESTADISTICAS
     public EstadisticaRana(String NombreJuego, int ErrorAscendente, int ErrorDescendente, String Fecha) {
         this.NombreJuego = NombreJuego;
         this.ErrorAscendente = 0;
         this.ErrorDescendente = 0;
         this.Fecha = Fecha;
     }
+    
+    //METODOS GET SET PARA ESTADISTICASS
 
     public String getNombreJuego() {
         return NombreJuego;

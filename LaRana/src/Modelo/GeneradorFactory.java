@@ -16,7 +16,9 @@ import javax.swing.JLabel;
 
 /**
  *
- * @author JuanPablo
+ *JUAN PABLO ROMERO
+ * ANGELICA ARROYAVE
+ * SANTIAGO BEDOYA
  */
 public class GeneradorFactory {
     

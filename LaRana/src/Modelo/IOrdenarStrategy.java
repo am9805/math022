@@ -12,8 +12,11 @@ import javax.swing.JLabel;
 
 /**
  *
- * @author JuanPablo
+ *JUAN PABLO ROMERO
+ * ANGELICA ARROYAVE
+ * SANTIAGO BEDOYA
  */
+
 public interface IOrdenarStrategy {
 
     Calendar c1 = Calendar.getInstance();
@@ -27,6 +30,6 @@ public interface IOrdenarStrategy {
     void ordenar(JLabel roca1, JLabel roca2, JLabel roca3, JLabel roca4,
             JLabel numRoc1, JLabel numRoc2, JLabel numRoc3, JLabel numRoc4,
             JLabel nube1, JLabel nube2, JLabel nube3, JLabel nube4,
-            JLabel Gif, JLabel RanaxRocaL);
+            JLabel Gif, JLabel RanaxRocaL,JLabel juguemos,JLabel Cronometro);
 
 }

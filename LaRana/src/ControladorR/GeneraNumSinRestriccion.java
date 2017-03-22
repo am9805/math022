@@ -6,9 +6,18 @@ import java.util.concurrent.ThreadLocalRandom;
 import static java.util.concurrent.ThreadLocalRandom.current;
 import javax.swing.JLabel;
 
+
+/**
+ *
+ *JUAN PABLO ROMERO
+ * ANGELICA ARROYAVE
+ * SANTIAGO BEDOYA
+ */
 public class GeneraNumSinRestriccion implements IGenerarNumeroStrategy {
 
     @Override
+    
+    //METODO QUE GENERA NUMEROS SIN RESTRICION  DE 1 A 99 Y 100 A  999
     public void GenerarNumero(JLabel a, JLabel b, JLabel c, JLabel d, JLabel e) {
         int n = ThreadLocalRandom.current().nextInt(1, 2 + 1);
         int limiteInferior;

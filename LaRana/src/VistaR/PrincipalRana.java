@@ -1,5 +1,6 @@
 package VistaR;
 
+import ControladorR.ControladorCronometro;
 import ControladorR.ControladorGenerarNumero;
 import ControladorR.ControladorOrdenar;
 import java.awt.event.MouseAdapter;
@@ -12,17 +13,22 @@ import javax.swing.TransferHandler;
 public class PrincipalRana extends javax.swing.JFrame {
 
     int numeroEntradas = 1;
+    boolean crono;
 
     public PrincipalRana() {
         initComponents();
         setLocationRelativeTo(null);
         Gif.setVisible(false);
-
-        // Texto.setVisible(false);
         Roca1.setVisible(true);
         Roca2.setVisible(false);
         Roca3.setVisible(false);
         Roca4.setVisible(false);
+        ro2.setVisible(false);
+        ro3.setVisible(false);
+        ro4.setVisible(false);
+//        lblCronometro.setText("0:0:0");
+
+        
 
     }
 
@@ -82,7 +88,8 @@ public class PrincipalRana extends javax.swing.JFrame {
         texto2 = new javax.swing.JLabel();
         texto3 = new javax.swing.JLabel();
         texto4 = new javax.swing.JLabel();
-        Fondo = new javax.swing.JLabel();
+        lblCronometro = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1375, 745));
@@ -204,7 +211,7 @@ public class PrincipalRana extends javax.swing.JFrame {
         getContentPane().add(texto2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 520, 740, -1));
 
         texto3.setFont(new java.awt.Font("Tempus Sans ITC", 1, 20)); // NOI18N
-        texto3.setText("Y si el tiempo se acaba… ¡la ranita a chapucear!");
+        texto3.setText("Para poder Ganar");
         getContentPane().add(texto3, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 570, -1, -1));
 
         texto4.setFont(new java.awt.Font("Snap ITC", 1, 14)); // NOI18N
@@ -212,27 +219,38 @@ public class PrincipalRana extends javax.swing.JFrame {
         texto4.setText("HAS CLIC AQUI PARA QUE  ");
         getContentPane().add(texto4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 340, -1, -1));
 
-        Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VistaR/Recursos/Fondito2.jpg"))); // NOI18N
-        Fondo.setText("jLabel5");
-        getContentPane().add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        lblCronometro.setFont(new java.awt.Font("Snap ITC", 1, 24)); // NOI18N
+        lblCronometro.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(lblCronometro, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 50, 250, 110));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VistaR/Recursos/Fondito2.jpg"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jugarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jugarMouseClicked
-
+        
         ro1.setText("");
         ro2.setText("");
         ro3.setText("");
         ro4.setText("");
+//       lblCronometro.setVisible(true);
+        crono = true;
+       
+        
         Gif.setVisible(false);
+
         RanaxRocaL.setVisible(true);
         Roca1.setVisible(true);
         Roca2.setVisible(false);
         Roca3.setVisible(false);
         Roca4.setVisible(false);
-        //  Texto.setVisible(true);
 
+//        ControladorCronometro c = new ControladorCronometro(lblCronometro, Roca1, Roca2, Roca3, Roca4, ro1, ro2, ro3, ro4, num1, num2, num3, num4,jugar, crono); //Intancio la clase         
+//        c.start();
+//
         ControladorGenerarNumero generar = ControladorGenerarNumero.getInstance();
         generar.generadorNumeros(num1, num2, num3, num4, forden);
 
@@ -240,6 +258,8 @@ public class PrincipalRana extends javax.swing.JFrame {
         transferirTexto(num2, ro2);
         transferirTexto(num3, ro3);
         transferirTexto(num4, ro4);
+        
+        jugar.setVisible(false);
 
         numeroEntradas = numeroEntradas + 1;
 
@@ -247,9 +267,9 @@ public class PrincipalRana extends javax.swing.JFrame {
     }//GEN-LAST:event_jugarMouseClicked
 
     private void avanzarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_avanzarMouseClicked
-       
+
         ControladorOrdenar ordenar = ControladorOrdenar.getInstance();
-        ordenar.OrdenarNumeros(forden, Roca1, Roca2, Roca3, Roca4, ro1, ro2, ro3, ro4, num1, num2, num3, num4, Gif, RanaxRocaL);
+        ordenar.OrdenarNumeros(forden, Roca1, Roca2, Roca3, Roca4, ro1, ro2, ro3, ro4, num1, num2, num3, num4, Gif, RanaxRocaL,jugar,lblCronometro);
 
     }//GEN-LAST:event_avanzarMouseClicked
 
@@ -290,7 +310,6 @@ public class PrincipalRana extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Estanque;
-    private javax.swing.JLabel Fondo;
     private javax.swing.JLabel Gif;
     private javax.swing.JLabel Nube1;
     private javax.swing.JLabel Nube2;
@@ -304,7 +323,9 @@ public class PrincipalRana extends javax.swing.JFrame {
     private javax.swing.JLabel TITULO;
     private javax.swing.JLabel avanzar;
     private javax.swing.JLabel forden;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jugar;
+    private javax.swing.JLabel lblCronometro;
     private javax.swing.JLabel num1;
     private javax.swing.JLabel num2;
     private javax.swing.JLabel num3;

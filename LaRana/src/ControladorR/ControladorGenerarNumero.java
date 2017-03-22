@@ -7,10 +7,11 @@ package ControladorR;
 
 import Modelo.GeneradorFactory;
 import javax.swing.JLabel;
-
 /**
  *
- * @author JuanPablo
+ *JUAN PABLO ROMERO
+ * ANGELICA ARROYAVE
+ * SANTIAGO BEDOYA
  */
 public class ControladorGenerarNumero {
     

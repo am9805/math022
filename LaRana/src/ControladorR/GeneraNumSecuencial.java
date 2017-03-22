@@ -12,7 +12,9 @@ import javax.swing.JLabel;
 
 /**
  *
- * @author JuanPablo
+ *JUAN PABLO ROMERO
+ * ANGELICA ARROYAVE
+ * SANTIAGO BEDOYA
  */
 public class GeneraNumSecuencial implements IGenerarNumeroStrategy  {
 
@@ -21,6 +23,8 @@ public class GeneraNumSecuencial implements IGenerarNumeroStrategy  {
  
         
     @Override
+    
+    //METODO QUE GENERA NUMEROS SECUENCIALMENTE DE 1 EN 1
      public void GenerarNumero(JLabel a, JLabel b, JLabel c, JLabel d, JLabel e){
           int i = 0, cantidad = 4;
         int arreglo[] = new int[cantidad];
